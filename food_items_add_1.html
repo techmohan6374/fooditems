@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,800&family=Noto+Sans+Tamil&family=Poppins&family=Roboto:wght@300;500&display=swap');
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container{
+            width: 100vw;
+            min-height: 100vh;
+            background: rgb(75,132,230);
+            background: linear-gradient(0deg, rgba(75,132,230,1) 0%, rgba(102,226,204,1) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            width: 330px;
+            min-height: 480px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            padding: 25px;
+        }
+        .box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .card h2{
+            margin-bottom: 15px;
+        }
+        .box input{
+            width: 230px;
+            height: 45px;
+            border: none;
+            outline: none;
+            padding: 5px 15px;
+            border: 1px solid gainsboro;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .box button{
+            width: 45px;
+            height: 45px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #8d49e8;
+            color:white;
+            font-weight: bolder;
+            font-size: 22px;
+
+        }
+        .food{
+            padding: 15px;
+            font-size: 18px;
+            line-height: 35px;
+            border-radius: 5px;
+        }
+        .footer{
+            margin-top: 10px;
+        }
+        .footer button{
+            width: 100px;
+            height: 45px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #8d49e8;
+            color:white;
+            font-size: 16px;
+        }
+    </style>
+    <div class="container">
+     <div class="card">
+        <h2>Food Items Add</h2>
+        <div class="box">
+            <input type="text" placeholder="Add your new food" id="t1">
+            <button onclick="m1()">+</button>
+        </div>
+        <div class="food" id="foods"></div>
+        <div class="footer">
+            <button onclick="m2()">Clear All</button>
+         </div>
+     </div>
+    
+    </div>
+  
+    <script>
+        function m1()
+        {
+            var a=document.getElementById('t1');
+            var b=document.getElementById('foods')
+            b.innerText+=a.value+"\n";
+            b.style.backgroundColor='#f2f2f2';
+        }
+        function m2(){
+            var d=document.getElementById('foods')
+            d.innerText='';
+            d.style.backgroundColor='#ffff'
+        }
+    </script>
+</body>
+</html>
